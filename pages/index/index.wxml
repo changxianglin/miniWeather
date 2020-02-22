@@ -4,9 +4,9 @@
   </picker>
 <!-- c5819110ad6d4bc2884405f493fdc801 -->
 <!-- https://free-api.heweather.net/s6/weather/now?location=shenzhen&key=c5819110ad6d4bc2884405f493fdc801 -->
-  <text>22°C晴</text>
+  <text>{{now.tmp}}°C {{now.cond_txt}}</text>
 
-  <image src="/images/999.png"></image>
+  <image src="/images/{{now.cond_code}}.png"></image>
 
   <view class="detail">
     <view class="item">
@@ -15,9 +15,9 @@
       <view class="content">能见度</view>
     </view>
     <view class="item">
-      <view class="content">0%</view>
-      <view class="content">0hpa</view>
-      <view class="content">0km</view>
+      <view class="content">{{now.hum}}%</view>
+      <view class="content">{{now.pres}} hpa</view>
+      <view class="content">{{now.vis}} km</view>
     </view>
     <view class="item">
         <view class="content">风向</view>
@@ -25,9 +25,9 @@
         <view class="content">风力</view>
     </view>
     <view class="item">
-        <view class="content">0</view>
-        <view class="content">0 km/h</view>
-        <view class="content">0 级</view>
+        <view class="content">{{now.wind_dir}}</view>
+        <view class="content">{{now.wind_spd}} km/h</view>
+        <view class="content">{{now.wind_sc}} 级</view>
     </view>
   </view>
 </view>

@@ -5,6 +5,8 @@ const app = getApp()
 Page({
   data: {
     region: ['广东省', '深圳市', '罗湖区'], 
+    now: '',
+
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
@@ -16,6 +18,7 @@ Page({
     })
   },
   onLoad: function () {
+    this.getWeather()
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -66,7 +69,9 @@ Page({
         key: 'c5819110ad6d4bc2884405f493fdc801'
       },
       success: function(res) {
-        console.log(res.data)
+       that.setData({
+         now: res.data.HeWeather6[0].now
+       })
       }
     })
   }

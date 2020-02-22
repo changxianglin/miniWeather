@@ -55,5 +55,19 @@ Page({
     this.setData({
       region: e.detail.value
     })
+    this.getWeather()
+  },
+  getWeather: function() {
+    var that = this 
+    wx.request({
+      url: 'https://free-api.heweather.net/s6/weather/now?',
+      data: {
+        location: that.data.region[1],
+        key: 'c5819110ad6d4bc2884405f493fdc801'
+      },
+      success: function(res) {
+        console.log(res.data)
+      }
+    })
   }
 })

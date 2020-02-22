@@ -2,10 +2,10 @@
   <picker mode="region" bindchange="changRegion">
     <view>{{region}}</view>
   </picker>
-
+<!-- c5819110ad6d4bc2884405f493fdc801 -->
   <text>22°C晴</text>
 
-  <image src="/images/sunny.png"></image>
+  <image src="/images/999.png"></image>
 
   <view class="detail">
     <view class="item">

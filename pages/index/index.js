@@ -4,7 +4,7 @@ const app = getApp()
 
 Page({
   data: {
-    region: ['广东省', '深圳市', '罗湖区'],
+    region: ['广东省', '深圳市', '罗湖区'], 
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')

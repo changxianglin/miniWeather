@@ -1,6 +1,6 @@
 <view class="container">
-  <picker mode="region">
-    <view>深圳市</view>
+  <picker mode="region" bindchange="changRegion">
+    <view>{{region}}</view>
   </picker>
 
   <text>22°C晴</text>
